@@ -2,7 +2,7 @@
 
 const categories = [
   { id: 'neuroscience', name: 'Neuroscience', image: 'images/neuroscience.png' },
-  { id: 'psychology', name: 'Psychology', image: 'images/psychology.png' },
+  { id: 'psychology', name: 'Psychology', image: 'psicologia.png' },
   { id: 'math', name: 'Math', image: 'images/math.png' },
   { id: 'physics', name: 'Physics', image: 'images/physics.png' },
   { id: 'geography', name: 'Geography', image: 'images/geography.png' },
