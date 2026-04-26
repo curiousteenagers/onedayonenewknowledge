@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Idea - One Day, One New Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">One Day, One New Knowledge</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="daily-idea.html">Daily Idea</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Today's Idea</h1>
+      <p class="intro-text">Start your day with a thought-provoking concept from a different discipline.</p>
+    </div>
+  </section>
+
+  <!-- Idea Content -->
+  <section class="page-section white">
+    <div class="container" id="daily-idea-container" style="max-width: 800px;">
+      <!-- Content will be loaded here by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="daily-idea.html">Daily Idea</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="about.html">About This Project</a></li>
+          <li><a href="donate.html">Support Us</a></li>
+          <li><a href="index.html#">Privacy</a></li>
+          <li><a href="index.html#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="daily-idea.html">Explore Today</a></li>
+          <li><a href="categories.html">By Discipline</a></li>
+          <li><a href="archive.html">Browse All</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 One Day, One New Knowledge. A passion project dedicated to curiosity and learning.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Load today's idea
+    document.addEventListener('DOMContentLoaded', () => {
+      const idea = getTodayIdea();
+      const category = getCategory(idea.category);
+      const container = document.getElementById('daily-idea-container');
+      
+      if (idea && category) {
+        const vocabularyHtml = idea.vocabulary.map(item => `
+          <div class="vocab-item">
+            <strong>${item.word}</strong>
+            <span>${item.definition}</span>
+          </div>
+        `).join('');
+        
+        const conceptsHtml = idea.keyConcepts.map(concept => `<li>${concept}</li>`).join('');
+        
+        const questionsHtml = idea.questionsToExplore.map(q => `<li>${q}</li>`).join('');
+        
+        container.innerHTML = `
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="category-${category.id}.html">${category.name}</a>
+            <span>/</span>
+            <span>${idea.title}</span>
+          </div>
+          
+          <div class="idea-header">
+            <p style="color: var(--primary-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--spacing-sm);">${category.name}</p>
+            <h1 class="idea-title">${idea.title}</h1>
+            <p style="font-size: 1.05rem; color: var(--gray-text); line-height: 1.8;">${idea.intro}</p>
+          </div>
+          
+          <div class="media-container">
+            <div class="media-placeholder">
+              <p>Video or audio explanation would appear here</p>
+              <small style="color: var(--gray-text);">📹 Placeholder for multimedia content</small>
+            </div>
+          </div>
+          
+          <div class="content-section">
+            <h3>Key Concepts</h3>
+            <ul class="key-concepts">
+              ${conceptsHtml}
+            </ul>
+          </div>
+          
+          <div class="content-section">
+            <h3>Vocabulary</h3>
+            <div class="vocabulary">
+              ${vocabularyHtml}
+            </div>
+          </div>
+          
+          <div class="content-section">
+            <h3>Big Question</h3>
+            <div class="big-question">
+              "${idea.bigQuestion}"
+            </div>
+          </div>
+          
+          <div class="content-section">
+            <h3>Questions to Explore</h3>
+            <ul class="key-concepts">
+              ${questionsHtml}
+            </ul>
+          </div>
+          
+          <div class="discussion-section">
+            <h3>Discussion & Comments</h3>
+            <form class="comment-form" data-idea-id="${idea.id}">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="email" name="email" placeholder="Your email (optional)">
+              <textarea name="comment" placeholder="Share your thoughts..."></textarea>
+              <button type="submit" class="btn btn-primary">Post Comment</button>
+            </form>
+            <div class="comments-list"></div>
+          </div>
+          
+          <div class="idea-nav">
+            <a href="category-${category.id}.html" class="idea-nav-item">
+              <small>← Back to Category</small>
+              <strong>${category.name}</strong>
+            </a>
+            <a href="archive.html" class="idea-nav-item" style="text-align: right;">
+              <small>Browse All Ideas →</small>
+              <strong>Archive</strong>
+            </a>
+          </div>
+        `;
+        
+        // Initialize comments
+        initializeComments();
+      }
+    });
+  </script>
+</body>
+</html>
+

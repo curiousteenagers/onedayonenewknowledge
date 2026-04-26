@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive - One Day, One New Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">One Day, One New Knowledge</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="daily-idea.html">Daily Idea</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Knowledge Archive</h1>
+      <p class="intro-text">Browse all ideas from our growing collection. Filter by discipline to explore topics that interest you.</p>
+    </div>
+  </section>
+
+  <!-- Archive Content -->
+  <section class="page-section light">
+    <div class="container">
+      <!-- Filters -->
+      <div class="filter-section">
+        <button class="filter-btn active" data-category="all">All Disciplines</button>
+        <button class="filter-btn" data-category="neuroscience">Neuroscience</button>
+        <button class="filter-btn" data-category="psychology">Psychology</button>
+        <button class="filter-btn" data-category="math">Math</button>
+        <button class="filter-btn" data-category="physics">Physics</button>
+        <button class="filter-btn" data-category="geography">Geography</button>
+        <button class="filter-btn" data-category="economics">Economics</button>
+        <button class="filter-btn" data-category="biology">Biology</button>
+        <button class="filter-btn" data-category="history">History</button>
+        <button class="filter-btn" data-category="philosophy">Philosophy</button>
+      </div>
+
+      <!-- Ideas Grid -->
+      <div class="grid grid-3" id="archive-grid">
+        <!-- Ideas will be loaded here by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="daily-idea.html">Daily Idea</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="about.html">About This Project</a></li>
+          <li><a href="donate.html">Support Us</a></li>
+          <li><a href="index.html#">Privacy</a></li>
+          <li><a href="index.html#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="daily-idea.html">Explore Today</a></li>
+          <li><a href="categories.html">By Discipline</a></li>
+          <li><a href="archive.html">Browse All</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 One Day, One New Knowledge. A passion project dedicated to curiosity and learning.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Load all ideas
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('archive-grid');
+      
+      ideas.forEach(idea => {
+        const category = getCategory(idea.category);
+        const card = document.createElement('a');
+        card.href = `idea-${idea.id}.html`;
+        card.className = 'card';
+        card.setAttribute('data-idea-category', idea.category);
+        card.style.textDecoration = 'none';
+        card.style.color = 'inherit';
+        
+        card.innerHTML = `
+          <p class="card-category">${category.name}</p>
+          <h3>${idea.title}</h3>
+          <p>${idea.preview}</p>
+          <div style="margin-top: var(--spacing-md);">
+            <a href="idea-${idea.id}.html" class="btn btn-small btn-secondary">Read →</a>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>
+
