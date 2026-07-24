@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neuroplasticity - One Day, One New Knowledge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><div class="nav-container"><a href="index.html" class="nav-logo">One Day, One New Knowledge</a><ul class="nav-menu">
+<li><a href="index.html">Home</a></li><li><a href="categories.html">Categories</a></li><li><a href="daily-idea.html">Daily Idea</a></li><li><a href="archive.html">Archive</a></li><li><a href="about.html">About</a></li><li><a href="donate.html">Donate</a></li></ul></div></nav>
+<section class="page-section white"><div class="container" style="max-width:800px;">
+<div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="category-neuroscience.html">Neuroscience</a><span>/</span><span>Neuroplasticity</span></div>
+<div class="idea-header">
+<p style="color: var(--primary-accent);font-weight:600;text-transform:uppercase;">Neuroscience</p>
+<h1 class="idea-title">Neuroplasticity</h1>
+<p style="font-size:1.05rem;color:var(--gray-text);line-height:1.8;">The brain's remarkable ability to adapt, reorganize, and grow throughout life.</p>
+</div>
+<div class="media-placeholder">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OHK8SB9elOw?si=feE46Ponpe9A41WV" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="content-section"><h3>Key Concepts</h3><ul class="key-concepts">
+<li>Synaptic Plasticity: The ability of connections between neurons to become stronger or weaker through experience and learning.</li>
+<li>Neural Pathways: Networks of neurons that transmit information and are continuously reshaped by practice and repetition.</li>
+<li>Long-Term Potentiation: A lasting increase in communication between neurons that supports learning and memory.</li>
+<li>Neurogenesis: The formation of new neurons in specific brain regions throughout life.</li>
+</ul></div>
+<div class="content-section"><h3>Vocabulary</h3><div class="vocabulary">
+<div class="vocab-item"><strong>Adapt (C1)</strong><span>To change in order to become more suitable for a new situation.</span></div>
+<div class="vocab-item"><strong>Reinforce (C1)</strong><span>To make something stronger.</span></div>
+<div class="vocab-item"><strong>Resilient (C2)</strong><span>Able to recover quickly from difficulties.</span></div>
+<div class="vocab-item"><strong>Stimulus (C1)</strong><span>Something that causes activity or a response.</span></div>
+<div class="vocab-item"><strong>Acquire (C1)</strong><span>To gain knowledge or a skill.</span></div>
+</div></div>
+<div class="content-section"><h3>Big Question</h3><div class="big-question">"If the brain is constantly rewiring itself, how much of who we are is truly fixed?"</div></div>
+<div class="content-section"><h3>Questions to Explore</h3><ul class="key-concepts">
+<li>How does learning a new skill physically change the brain?</li>
+<li>Can neuroplasticity help people recover after brain injuries?</li>
+<li>Why does repetition strengthen neural connections?</li>
+</ul></div>
+<div class="discussion-section"><h3>Discussion & Comments</h3><form class="comment-form" data-idea-id="1"><input type="text" name="name" placeholder="Your name" required><input type="email" name="email" placeholder="Your email (optional)"><textarea name="comment" placeholder="Share your thoughts..."></textarea><button type="submit" class="btn btn-primary">Post Comment</button></form><div class="comments-list"></div></div>
+<div class="idea-nav"><a href="category-neuroscience.html" class="idea-nav-item"><small>← Back to Category</small><strong>Neuroscience</strong></a><a href="bystander.html" class="idea-nav-item" style="text-align:right;"><small>Next Idea →</small><strong>The Bystander Effect</strong></a></div>
+</div></section>
+<script src="js/data.js"></script><script src="js/script.js"></script><script>document.addEventListener('DOMContentLoaded', initializeComments);</script>
+</body></html>
