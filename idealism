@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idealism - One Day, One New Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">One Day, One New Knowledge</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="daily-idea.html">Daily Idea</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Idea Content -->
+  <section class="page-section white">
+    <div class="container" style="max-width: 800px;">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="category-philosophy.html">Philosophy</a>
+        <span>/</span>
+        <span>Idealism</span>
+      </div>
+      
+      <div class="idea-header">
+        <p style="color: var(--primary-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--spacing-sm);">Philosophy</p>
+        <h1 class="idea-title">Idealism </h1>
+        <p style="font-size: 1.05rem; color: var(--gray-text); line-height: 1.8;">Is reality independent of the mind, or does consciousness play a fundamental role in shaping what we call reality?</p>
+      </div>
+      
+     
+        <div class="media-placeholder">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zucIjKzr3bQ?si=inKP53Fik3YwUlPR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+     <div class="content-section">
+    <h3>Key Concepts</h3>
+    <ul class="key-concepts">
+      <li><strong>Philosophical Idealism versus Realism:</strong> Unlike realism which assumes the material universe exists completely independent of observation, idealism argues that consciousness and mental processes form the fundamental bedrock of all reality.</li>
+      <li><strong>Berkeley's Subjective Idealism:</strong> George Berkeley asserted that to be is to be perceived, dismantling the distinction between primary and secondary qualities and concluding that unperceived material substance is an incoherent fiction sustained only by an infinite divine mind.</li>
+      <li><strong>Kant's Transcendental Idealism:</strong> Immanuel Kant separated reality into unknowable noumena and experienced phenomena, arguing that the human mind is an active framing lens that structures raw sensory inputs through spatial and temporal software.</li>
+      <li><strong>Hegel's Absolute Idealism:</strong> Rejecting Kant's unknowable thing-in-itself, Georg Wilhelm Friedrich Hegel proposed that reality is a unified, evolving collective mind that continuously overcomes self-alienation through historical and dialectical processes.</li>
+      <li><strong>Modern Analytic Idealism:</strong> Contemporary thinkers like Bernardo Kastrup address the hard problem of consciousness by proposing that universal consciousness is the primary substrate of reality, with individual minds acting as localized whirlpools within a broader stream.</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h3>Vocabulary</h3>
+    <div class="vocabulary">
+      <div class="vocab-item">
+        <strong>Substrate (C2)</strong>
+        <span>A fundamental layer, substance, or foundation upon which other things exist or develop.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Concede (C2)</strong>
+        <span>To admit that something is true, logical, or valid, often unwillingly or after previous denial.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Inextricably (C2)</strong>
+        <span>In a manner that is impossible to separate, untangle, or escape from.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Phenomenon (C1)</strong>
+        <span>Something that exists and can be perceived or experienced through the human senses.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Incoherent (C2)</strong>
+        <span>Lacking logical connection, clarity, or internal structural consistency.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3>Big Question</h3>
+    <div class="big-question">
+      "If our experience of the physical universe is inescapably constructed and filtered by the architecture of the mind, can we ever truly know reality as it exists in itself, or are we forever observing the universe from the inside out?"
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3>Questions to Explore</h3>
+    <ul class="key-concepts">
+      <li>How would scientific research methodologies evolve if quantum physics conclusively proved that physical matter is merely a secondary byproduct of universal consciousness?</li>
+      <li>Could virtual reality simulations and advanced neural interfaces be used to test Kantian theories about how the brain constructs spatial and temporal framing software?</li>
+      <li>What if social constructivism utilized Hegelian dialectics to actively resolve modern ideological polarization by synthesizing opposing cultural perspectives?</li>
+    </ul>
+  </div>
+      
+      <div class="discussion-section">
+        <h3>Discussion & Comments</h3>
+        <form class="comment-form" data-idea-id="1">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email (optional)">
+          <textarea name="comment" placeholder="Share your thoughts..."></textarea>
+          <button type="submit" class="btn btn-primary">Post Comment</button>
+        </form>
+        <div class="comments-list"></div>
+      </div>
+      
+      <div class="idea-nav">
+        <a href="category-philosophy.html" class="idea-nav-item">
+          <small>← Back to Category</small>
+          <strong>Philosophy</strong>
+        </a>
+        <a href="haiti.html" class="idea-nav-item" style="text-align: right;">
+          <small>Next Idea →</small>
+          <strong>  The Haitian Revolution</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="daily-idea.html">Daily Idea</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="about.html">About This Project</a></li>
+          <li><a href="donate.html">Support Us</a></li>
+          <li><a href="index.html#">Privacy</a></li>
+          <li><a href="index.html#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="daily-idea.html">Explore Today</a></li>
+          <li><a href="categories.html">By Discipline</a></li>
+          <li><a href="archive.html">Browse All</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 One Day, One New Knowledge. A passion project dedicated to curiosity and learning.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initializeComments);
+  </script>
+</body>
+</html>
