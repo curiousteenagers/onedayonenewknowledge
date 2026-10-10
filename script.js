@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initializeNavigation();
   initializeFilters();
+  initializeArchiveSearch();
   initializeComments();
 });
 
@@ -29,32 +30,58 @@ function initializeFilters() {
       filterBtns.forEach(b => b.classList.remove('active'));
       // Add active class to clicked button
       btn.classList.add('active');
-      
-      const category = btn.dataset.category;
-      filterIdeas(category);
+      applyArchiveFilters();
     });
   });
 }
 
-// Filter ideas grid based on category
-function filterIdeas(category) {
+// Initialize archive search input
+function initializeArchiveSearch() {
+  const searchInput = document.getElementById('idea-search');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', applyArchiveFilters);
+}
+
+function applyArchiveFilters() {
+  const category = document.querySelector('.filter-btn.active')?.dataset.category || 'all';
+  const searchQuery = document.getElementById('idea-search')?.value || '';
+  filterIdeas(category, searchQuery);
+}
+
+// Filter ideas grid based on category and title search
+function filterIdeas(category, searchQuery = '') {
   const ideaCards = document.querySelectorAll('[data-idea-category]');
+  const query = (searchQuery || '').trim().toLowerCase();
+  let visibleCount = 0;
   
   ideaCards.forEach(card => {
-    if (category === 'all' || card.dataset.ideaCategory === category) {
-      card.style.display = 'grid';
-      setTimeout(() => card.style.opacity = '1', 10);
+    const matchesCategory = category === 'all' || card.dataset.ideaCategory === category;
+    const searchableText = (card.dataset.ideaSearch || card.textContent).toLowerCase();
+    const matchesSearch = !query || searchableText.includes(query);
+    const shouldShow = matchesCategory && matchesSearch;
+
+    card.style.display = shouldShow ? 'block' : 'none';
+    if (shouldShow) {
+      card.style.opacity = '1';
+      visibleCount++;
     } else {
       card.style.opacity = '0';
-      setTimeout(() => card.style.display = 'none', 300);
     }
   });
+
+  const noResults = document.getElementById('no-results');
+  if (noResults) {
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
 }
 
 // Simple comment storage using localStorage
 function initializeComments() {
   const commentForm = document.querySelector('.comment-form');
   if (!commentForm) return;
+  if (commentForm.dataset.commentsInitialized === 'true') return;
+  commentForm.dataset.commentsInitialized = 'true';
   
   const ideaId = commentForm.dataset.ideaId;
   const commentsContainer = document.querySelector('.comments-list');
@@ -62,29 +89,28 @@ function initializeComments() {
   if (ideaId && commentsContainer) {
     loadComments(ideaId, commentsContainer);
     
-    const submitBtn = commentForm.querySelector('button');
-    if (submitBtn) {
-      submitBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const nameInput = commentForm.querySelector('input[name="name"]');
-        const emailInput = commentForm.querySelector('input[name="email"]');
-        const textInput = commentForm.querySelector('textarea[name="comment"]');
-        
-        if (nameInput.value && textInput.value) {
-          addComment(ideaId, {
-            name: nameInput.value,
-            email: emailInput.value,
-            text: textInput.value,
-            date: new Date().toLocaleDateString()
-          });
-          
-          // Clear form
-          commentForm.reset();
-          // Reload comments
-          loadComments(ideaId, commentsContainer);
-        }
+    const textInput = commentForm.querySelector('textarea[name="comment"]');
+    if (textInput) textInput.required = true;
+
+    commentForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!commentForm.reportValidity()) return;
+
+      const nameInput = commentForm.querySelector('input[name="name"]');
+      const emailInput = commentForm.querySelector('input[name="email"]');
+      const commentText = textInput.value.trim();
+      if (!nameInput.value.trim() || !commentText) return;
+
+      addComment(ideaId, {
+        name: nameInput.value.trim(),
+        email: emailInput?.value.trim() || '',
+        text: commentText,
+        date: new Date().toLocaleDateString()
       });
-    }
+
+      commentForm.reset();
+      loadComments(ideaId, commentsContainer);
+    });
   }
 }
 
