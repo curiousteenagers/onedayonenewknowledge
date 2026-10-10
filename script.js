@@ -76,86 +76,41 @@ function filterIdeas(category, searchQuery = '') {
   }
 }
 
-// Simple comment storage using localStorage
+// Replace the browser-only comment form with a shared Giscus discussion.
 function initializeComments() {
-  const commentForm = document.querySelector('.comment-form');
-  if (!commentForm) return;
-  if (commentForm.dataset.commentsInitialized === 'true') return;
-  commentForm.dataset.commentsInitialized = 'true';
-  
-  const ideaId = commentForm.dataset.ideaId;
-  const commentsContainer = document.querySelector('.comments-list');
-  
-  if (ideaId && commentsContainer) {
-    loadComments(ideaId, commentsContainer);
-    
-    const textInput = commentForm.querySelector('textarea[name="comment"]');
-    if (textInput) textInput.required = true;
+  document.querySelectorAll('.comment-form').forEach(commentForm => {
+    const ideaId = commentForm.dataset.ideaId;
+    const discussion = commentForm.closest('.discussion-section');
+    const commentsContainer = discussion?.querySelector('.comments-list');
+    if (!ideaId || !commentsContainer) return;
 
-    commentForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if (!commentForm.reportValidity()) return;
+    commentForm.remove();
+    commentsContainer.replaceChildren();
 
-      const nameInput = commentForm.querySelector('input[name="name"]');
-      const emailInput = commentForm.querySelector('input[name="email"]');
-      const commentText = textInput.value.trim();
-      if (!nameInput.value.trim() || !commentText) return;
+    const widget = document.createElement('div');
+    widget.className = 'giscus';
+    commentsContainer.appendChild(widget);
 
-      addComment(ideaId, {
-        name: nameInput.value.trim(),
-        email: emailInput?.value.trim() || '',
-        text: commentText,
-        date: new Date().toLocaleDateString()
-      });
-
-      commentForm.reset();
-      loadComments(ideaId, commentsContainer);
-    });
-  }
-}
-
-// Load comments from localStorage
-function loadComments(ideaId, container) {
-  const comments = JSON.parse(localStorage.getItem(`comments-${ideaId}`) || '[]');
-  container.innerHTML = '';
-  
-  if (comments.length === 0) {
-    container.innerHTML = '<p style="color: var(--gray-text);">No comments yet. Be the first to share your thoughts!</p>';
-    return;
-  }
-  
-  comments.forEach(comment => {
-    const commentEl = document.createElement('div');
-    commentEl.style.cssText = `
-      padding: var(--spacing-md);
-      background-color: var(--white);
-      border-radius: 4px;
-      margin-bottom: var(--spacing-md);
-      border-left: 3px solid var(--primary-accent);
-    `;
-    
-    commentEl.innerHTML = `
-      <strong style="color: var(--dark-text);">${escapeHtml(comment.name)}</strong>
-      <small style="color: var(--gray-text); display: block; margin-bottom: var(--spacing-xs);">${comment.date}</small>
-      <p style="margin: 0; color: var(--gray-text);">${escapeHtml(comment.text)}</p>
-    `;
-    
-    container.appendChild(commentEl);
+    const giscusScript = document.createElement('script');
+    giscusScript.src = 'https://giscus.app/client.js';
+    giscusScript.async = true;
+    giscusScript.crossOrigin = 'anonymous';
+    giscusScript.dataset.repo = 'curiousteenagers/onedayonenewknowledge';
+    giscusScript.dataset.repoId = 'R_kgDOSMvXwg';
+    giscusScript.dataset.category = 'Announcements';
+    giscusScript.dataset.categoryId = 'DIC_kwDOSMvXws4DHdhx';
+    giscusScript.dataset.mapping = 'specific';
+    giscusScript.dataset.term = `idea-${ideaId}`;
+    giscusScript.dataset.strict = '1';
+    giscusScript.dataset.reactionsEnabled = '1';
+    giscusScript.dataset.inputPosition = 'bottom';
+    giscusScript.dataset.theme = 'preferred_color_scheme';
+    giscusScript.dataset.lang = 'es';
+    giscusScript.onerror = () => {
+      commentsContainer.textContent = 'No se pudieron cargar los comentarios. Comprueba tu conexión e inténtalo de nuevo.';
+    };
+    widget.appendChild(giscusScript);
   });
-}
-
-// Add comment to localStorage
-function addComment(ideaId, comment) {
-  const comments = JSON.parse(localStorage.getItem(`comments-${ideaId}`) || '[]');
-  comments.push(comment);
-  localStorage.setItem(`comments-${ideaId}`, JSON.stringify(comments));
-}
-
-// Escape HTML to prevent XSS
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
 }
 
 // Navigate to idea
