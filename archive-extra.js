@@ -1,4 +1,8 @@
 const archiveExtraIdeas = [
+ { href: 'quantumt.html', title: 'Quantum Theory and the Photoelectric Effect', category: 'physics', preview: 'How did shining light on a metal surface help reveal that energy comes in discrete packets? Discover the photoelectric effect, a phenomenon that challenged classical physics and helped establish quantum theory through Albert Einstein’s explanation of how light transfers energy to electrons.' },
+  { href: 'mongol.html', title: 'Mongol Eurasia: Generals, Merchants, and Intellectuals', category: 'history', preview: 'How did the Mongol Empire reshape connections between Europe and Asia?' },
+  { href: 'idegosuperego.html', title: 'The Tripartite Mind: Id, Ego, and Superego', category: 'psychology', preview: 'Why do our desires sometimes clash with our sense of responsibility? Discover Sigmund Freud’s model of the mind.' },
+  { href: 'frenchrev.html', title: 'The French Revolution', category: 'history', preview: 'How did a crisis of inequality, political power, and economic hardship transform France and reshape the modern world?' },
   { href: 'moneyc.html', title: 'Why Do Currencies Gain and Lose Value?', category: 'economics', preview: 'The economic forces that determine the value of money around the world.' },
   { href: 'microplastics.html', title: 'Impact of Microplastics on Aquatic Food Webs', category: 'biology', preview: 'How microplastics move through aquatic ecosystems, from microscopic organisms to fish and other animals.' },
   { href: 'hall.html', title: 'The Monty Hall Problem', category: 'math', preview: 'A counterintuitive puzzle that challenges our understanding of probability.' },
