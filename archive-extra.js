@@ -1,4 +1,6 @@
 const archiveExtraIdeas = [
+ { href: 'nihilism.html', title: 'Nihilism and revaluation of values', category: 'philosophy', preview: "What happens when traditional beliefs lose their power to give life meaning? " },
+ { href: 'utilitarianism.html', title: 'Utilitarianism', category: 'philosophy', preview: "How should we decide what is morally right when our choices affect many people? " }, 
  { href: 'marxism.html', title: 'Marxism', category: 'economics', preview: "How does the ownership of resources and the organization of work shape society? Explore Marxism." },
   { href: 'asylumeurope.html', title: 'Analyzing the EU New Pact on Migration and Asylum', category: 'geography', preview: 'How can the European Union manage migration while balancing border security, asylum rights, and cooperation between member states? ' },
 { href: 'tprospect.html', title: 'Prospect Theory', category: 'economics', preview: "Why does losing money often feel worse than gaining the same amount feels good? Discover Prospect Theory." },
