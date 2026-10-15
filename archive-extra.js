@@ -1,4 +1,6 @@
 const archiveExtraIdeas = [
+  { href: 'neolithic.html', title: 'The Neolithic Revolution', category: 'history', preview: 'How did humans transition from hunting and gathering to farming and permanent settlements? ' },
+  { href: 'english.html', title: 'The Imperial and Digital Rise of Global English', category: 'history', preview: 'How did English become a global language used in science, business, education, and digital communication?' },
  { href: 'nihilism.html', title: 'Nihilism and revaluation of values', category: 'philosophy', preview: "What happens when traditional beliefs lose their power to give life meaning? " },
  { href: 'utilitarianism.html', title: 'Utilitarianism', category: 'philosophy', preview: "How should we decide what is morally right when our choices affect many people? " }, 
  { href: 'marxism.html', title: 'Marxism', category: 'economics', preview: "How does the ownership of resources and the organization of work shape society? Explore Marxism." },
