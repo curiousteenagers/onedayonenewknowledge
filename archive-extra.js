@@ -1,4 +1,7 @@
 const archiveExtraIdeas = [
+  { href: 'elnino.html',  title: 'El Niño and Coastal Upwelling', category: 'geography', preview: 'How did the 2015–2016 El Niño event affect sea-surface temperatures and marine productivity along the coast of Peru?' },
+{ href: 'scopetopic.html', title: 'Urban Expansion and Agricultural Land Loss in Córdoba, Argentina', category: 'geography', 
+  preview: 'How has urban expansion changed the landscape around Córdoba, Argentina, over the past decade?  ' },
   { href: 'neolithic.html', title: 'The Neolithic Revolution', category: 'history', preview: 'How did humans transition from hunting and gathering to farming and permanent settlements? ' },
   { href: 'english.html', title: 'The Imperial and Digital Rise of Global English', category: 'history', preview: 'How did English become a global language used in science, business, education, and digital communication?' },
  { href: 'nihilism.html', title: 'Nihilism and revaluation of values', category: 'philosophy', preview: "What happens when traditional beliefs lose their power to give life meaning? " },
