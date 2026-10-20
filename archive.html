@@ -1,174 +1,479 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Archive - One Day, One New Knowledge</title>
-  <link rel="stylesheet" href="style.css" onerror="this.onerror=null;this.href='css/style.css'">
+  <meta
+    name="description"
+    content="Explore the complete archive of One Day, One New Knowledge. Discover ideas across nine disciplines."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="data.js" defer></script>
+  <script src="archive-extra.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
+
 <body>
+
   <!-- Navigation -->
   <nav>
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">One Day, One New Knowledge</a>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="categories.html">Categories</a></li>
-        <li><a href="daily-idea.html">Daily Idea</a></li>
-        <li><a href="archive.html">Archive</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="donate.html">Donate</a></li>
-      </ul>
+      <a href="index.html" class="logo">
+        One Day, One New Knowledge
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        type="button"
+      >
+        ☰
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="daily-idea.html">Daily Idea</a>
+        <a href="archive.html">Archive</a>
+        <a href="about.html">About</a>
+        <a href="donate.html">Donate</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Header -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Knowledge Archive</h1>
-      <p class="intro-text">Browse all ideas from our growing collection. Filter by discipline to explore topics that interest you.</p>
-    </div>
-  </section>
+  <!-- Main Content -->
+  <main class="container">
 
-  <!-- Archive Content -->
-  <section class="page-section light">
-    <div class="container">
-      <!-- Search and Filters -->
-      <div class="search-box">
-        <input type="search" id="idea-search" placeholder="Buscar por título, tema o disciplina..." aria-label="Buscar ideas" />
-      </div>
-      <div class="filter-section">
-        <button class="filter-btn active" data-category="all">All Disciplines</button>
-        <button class="filter-btn" data-category="neuroscience">Neuroscience</button>
-        <button class="filter-btn" data-category="psychology">Psychology</button>
-        <button class="filter-btn" data-category="math">Math</button>
-        <button class="filter-btn" data-category="physics">Physics</button>
-        <button class="filter-btn" data-category="geography">Geography</button>
-        <button class="filter-btn" data-category="economics">Economics</button>
-        <button class="filter-btn" data-category="biology">Biology</button>
-        <button class="filter-btn" data-category="history">History</button>
-        <button class="filter-btn" data-category="philosophy">Philosophy</button>
-      </div>
-      <div id="no-results" class="empty-state">No se encontraron ideas con ese título.</div>
+    <header class="page-header">
+      <h1>Explore the Archive</h1>
 
-      <!-- Ideas Grid -->
-      <div class="grid grid-3" id="archive-grid">
-        <!-- Ideas will be loaded here by JavaScript -->
+      <p>
+        Discover ideas from nine disciplines, explore unfamiliar subjects,
+        and learn something new every day.
+      </p>
+    </header>
+
+    <!-- Search -->
+    <section class="archive-search" aria-label="Search the archive">
+      <label for="idea-search">Search for a topic</label>
+
+      <input
+        type="search"
+        id="idea-search"
+        placeholder="Search by title, discipline, or keyword..."
+        autocomplete="off"
+      >
+    </section>
+
+    <!-- Category Filters -->
+    <section class="archive-filters" aria-label="Filter by discipline">
+      <div class="filter-buttons">
+
+        <button
+          type="button"
+          class="filter-btn active"
+          data-category="all"
+          aria-pressed="true"
+        >
+          All Topics
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="neuroscience"
+          aria-pressed="false"
+        >
+          Neuroscience
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="psychology"
+          aria-pressed="false"
+        >
+          Psychology
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="math"
+          aria-pressed="false"
+        >
+          Mathematics
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="physics"
+          aria-pressed="false"
+        >
+          Physics
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="geography"
+          aria-pressed="false"
+        >
+          Geography
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="economics"
+          aria-pressed="false"
+        >
+          Economics
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="biology"
+          aria-pressed="false"
+        >
+          Biology
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="history"
+          aria-pressed="false"
+        >
+          History
+        </button>
+
+        <button
+          type="button"
+          class="filter-btn"
+          data-category="philosophy"
+          aria-pressed="false"
+        >
+          Philosophy
+        </button>
+
       </div>
+    </section>
+
+    <!-- Results Counter -->
+    <p
+      id="archive-count"
+      class="archive-count"
+      aria-live="polite"
+    >
+      Loading topics...
+    </p>
+
+    <!-- Archive Grid -->
+    <section
+      id="archive-grid"
+      class="grid grid-3"
+      aria-label="Archive topics"
+    >
+      <!-- Cards are generated by JavaScript -->
+    </section>
+
+    <!-- No Results -->
+    <div
+      id="no-results"
+      class="no-results"
+      role="status"
+      hidden
+    >
+      <h2>No topics found</h2>
+
+      <p>
+        Try another search term or select a different discipline.
+      </p>
+
+      <button
+        type="button"
+        id="reset-archive"
+        class="filter-btn"
+      >
+        Show all topics
+      </button>
     </div>
-  </section>
+
+  </main>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="categories.html">Categories</a></li>
-          <li><a href="archive.html">Archive</a></li>
-          <li><a href="daily-idea.html">Daily Idea</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Learn</h4>
-        <ul>
-          <li><a href="about.html">About This Project</a></li>
-          <li><a href="donate.html">Support Us</a></li>
-          <li><a href="index.html#">Privacy</a></li>
-          <li><a href="index.html#">Terms</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Get Started</h4>
-        <ul>
-          <li><a href="daily-idea.html">Explore Today</a></li>
-          <li><a href="categories.html">By Discipline</a></li>
-          <li><a href="archive.html">Browse All</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 One Day, One New Knowledge. A passion project dedicated to curiosity and learning.</p>
+    <div class="container">
+      <p>
+        One Day, One New Knowledge — Learn something new every day.
+      </p>
     </div>
   </footer>
 
+  <!-- Archive Generation -->
   <script>
-    function loadArchiveScript(paths) {
-      return new Promise((resolve, reject) => {
-        function tryPath(index) {
-          const script = document.createElement('script');
-          script.src = paths[index];
-          script.onload = resolve;
-          script.onerror = () => {
-            script.remove();
-            if (index + 1 < paths.length) {
-              tryPath(index + 1);
-            } else {
-              reject(new Error(`Could not load ${paths[0]}`));
-            }
-          };
-          document.body.appendChild(script);
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+      const grid = document.getElementById('archive-grid');
+      const searchInput = document.getElementById('idea-search');
+      const countElement = document.getElementById('archive-count');
+      const noResults = document.getElementById('no-results');
+      const resetButton = document.getElementById('reset-archive');
+      const filterButtons = document.querySelectorAll('.filter-btn[data-category]');
 
-        tryPath(0);
-      });
-    }
+      const categoryNames = {
+        neuroscience: 'Neuroscience',
+        psychology: 'Psychology',
+        math: 'Mathematics',
+        physics: 'Physics',
+        geography: 'Geography',
+        economics: 'Economics',
+        biology: 'Biology',
+        history: 'History',
+        philosophy: 'Philosophy'
+      };
 
-    document.addEventListener('DOMContentLoaded', async () => {
-      try {
-        await loadArchiveScript(['data.js', 'js/data.js']);
-        await loadArchiveScript(['archive-extra.js', 'js/archive-extra.js']);
-        await loadArchiveScript(['script.js', 'js/script.js']);
-      } catch (error) {
-        document.getElementById('no-results').textContent = 'No se pudieron cargar las ideas. Recarga la página.';
-        document.getElementById('no-results').style.display = 'block';
+      if (!grid) {
+        console.error('Archive error: #archive-grid was not found.');
         return;
       }
 
-      initializeNavigation();
-      initializeFilters();
-      initializeArchiveSearch();
-      const grid = document.getElementById('archive-grid');
-
-      const existingLinks = new Set(
-        Array.from(grid.querySelectorAll('a.card'), card => card.getAttribute('href'))
-      );
-
-      function createCard(idea) {
-        const category = getCategory(idea.category);
-        const card = document.createElement('a');
-        card.href = idea.href || `idea-${idea.id}.html`;
-        card.className = 'card';
-        card.setAttribute('data-idea-category', idea.category);
-        card.setAttribute('data-idea-title', idea.title);
-        card.setAttribute('data-idea-search', `${idea.title} ${idea.preview} ${category.name}`);
-        const categoryLabel = document.createElement('p');
-        categoryLabel.className = 'card-category';
-        categoryLabel.textContent = category.name;
-        const title = document.createElement('h3');
-        title.textContent = idea.title;
-        const preview = document.createElement('p');
-        preview.textContent = idea.preview;
-        const readLabel = document.createElement('span');
-        readLabel.className = 'btn btn-small btn-secondary';
-        readLabel.style.display = 'inline-block';
-        readLabel.style.marginTop = 'var(--spacing-md)';
-        readLabel.textContent = 'Read →';
-        card.append(categoryLabel, title, preview, readLabel);
-        grid.appendChild(card);
+      /*
+       * Confirm that both data files were loaded.
+       */
+      if (typeof ideas === 'undefined') {
+        grid.innerHTML = '<p>The main topic list could not be loaded. Check that data.js exists and has no errors.</p>';
+        countElement.textContent = 'Unable to load topics.';
+        console.error('Archive error: data.js did not define the ideas array.');
+        return;
       }
 
-      ideas.forEach(idea => {
-        const href = `idea-${idea.id}.html`;
-        if (!existingLinks.has(href)) createCard(idea);
-        existingLinks.add(href);
+      if (typeof archiveExtraIdeas === 'undefined') {
+        grid.innerHTML = '<p>The additional topic list could not be loaded. Check that archive-extra.js exists and has no errors.</p>';
+        countElement.textContent = 'Unable to load all topics.';
+        console.error('Archive error: archive-extra.js did not define archiveExtraIdeas.');
+        return;
+      }
+
+      /*
+       * Convert the main ideas to the same format as the extra ideas.
+       */
+      const mainTopics = ideas.map(function (idea) {
+        return {
+          ...idea,
+          href: idea.href || `idea-${idea.id}.html`,
+          category: String(idea.category || '').toLowerCase(),
+          title: idea.title || 'Untitled topic',
+          preview: idea.preview || idea.intro || 'Explore this topic and discover something new.'
+        };
       });
 
-      archiveExtraIdeas.forEach(idea => {
-        if (!existingLinks.has(idea.href)) createCard(idea);
+      const extraTopics = archiveExtraIdeas.map(function (idea) {
+        return {
+          ...idea,
+          href: idea.href || '',
+          category: String(idea.category || '').toLowerCase(),
+          title: idea.title || 'Untitled topic',
+          preview: idea.preview || 'Explore this topic and discover something new.'
+        };
       });
+
+      /*
+       * Combine both lists.
+       * Deduplicate by normalized title, not by URL.
+       * This prevents duplicate titles from appearing twice while
+       * allowing different topics to appear even if their URLs match.
+       */
+      const allTopics = [];
+      const seenTitles = new Set();
+
+      [...mainTopics, ...extraTopics].forEach(function (idea) {
+        const normalizedTitle = idea.title
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, ' ');
+
+        if (!normalizedTitle || seenTitles.has(normalizedTitle)) {
+          if (normalizedTitle) {
+            console.warn('Duplicate topic title skipped:', idea.title);
+          }
+          return;
+        }
+
+        seenTitles.add(normalizedTitle);
+        allTopics.push(idea);
+      });
+
+      /*
+       * Create one archive card.
+       */
+      function createCard(idea) {
+        const card = document.createElement('a');
+
+        card.className = 'card';
+        card.href = idea.href || '#';
+        card.dataset.ideaCategory = idea.category;
+        card.dataset.ideaTitle = idea.title;
+        card.dataset.ideaSearch = [
+          idea.title,
+          idea.preview,
+          categoryNames[idea.category] || idea.category
+        ].join(' ');
+
+        const category = document.createElement('span');
+        category.className = 'card-category';
+        category.textContent =
+          categoryNames[idea.category] || 'Other';
+
+        const title = document.createElement('h3');
+        title.textContent = idea.title;
+
+        const preview = document.createElement('p');
+        preview.textContent = idea.preview;
+
+        const readMore = document.createElement('span');
+        readMore.className = 'card-link';
+        readMore.textContent = 'Explore topic →';
+
+        card.append(category, title, preview, readMore);
+
+        if (!idea.href) {
+          card.removeAttribute('href');
+          card.setAttribute('aria-disabled', 'true');
+          card.classList.add('card-unavailable');
+          console.warn('Topic has no URL:', idea.title);
+        }
+
+        if (!categoryNames[idea.category]) {
+          console.warn(
+            'Unknown category:',
+            idea.category,
+            'for topic:',
+            idea.title
+          );
+        }
+
+        return card;
+      }
+
+      /*
+       * Render every topic into the archive.
+       */
+      function renderTopics(topics) {
+        const fragment = document.createDocumentFragment();
+
+        topics.forEach(function (idea) {
+          fragment.appendChild(createCard(idea));
+        });
+
+        grid.replaceChildren(fragment);
+      }
+
+      /*
+       * Apply category and text filters together.
+       */
+      function applyFilters() {
+        const activeButton = document.querySelector(
+          '.filter-btn[data-category].active'
+        );
+
+        const selectedCategory = activeButton
+          ? activeButton.dataset.category
+          : 'all';
+
+        const query = (searchInput.value || '')
+          .trim()
+          .toLowerCase();
+
+        let visibleCount = 0;
+
+        grid.querySelectorAll('[data-idea-category]').forEach(function (card) {
+          const cardCategory = card.dataset.ideaCategory;
+          const searchableText = (
+            card.dataset.ideaSearch || card.textContent
+          ).toLowerCase();
+
+          const matchesCategory =
+            selectedCategory === 'all' ||
+            cardCategory === selectedCategory;
+
+          const matchesSearch = searchableText.includes(query);
+          const shouldShow = matchesCategory && matchesSearch;
+
+          card.hidden = !shouldShow;
+
+          if (shouldShow) {
+            visibleCount++;
+          }
+        });
+
+        countElement.textContent =
+          `Showing ${visibleCount} of ${allTopics.length} topics`;
+
+        noResults.hidden = visibleCount !== 0;
+      }
+
+      /*
+       * Filter button behavior.
+       */
+      filterButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          filterButtons.forEach(function (otherButton) {
+            otherButton.classList.remove('active');
+            otherButton.setAttribute('aria-pressed', 'false');
+          });
+
+          button.classList.add('active');
+          button.setAttribute('aria-pressed', 'true');
+
+          applyFilters();
+        });
+      });
+
+      /*
+       * Search as the user types.
+       */
+      searchInput.addEventListener('input', applyFilters);
+
+      /*
+       * Reset filters and search.
+       */
+      resetButton.addEventListener('click', function () {
+        searchInput.value = '';
+
+        filterButtons.forEach(function (button) {
+          const isAll = button.dataset.category === 'all';
+
+          button.classList.toggle('active', isAll);
+          button.setAttribute('aria-pressed', String(isAll));
+        });
+
+        applyFilters();
+      });
+
+      /*
+       * Initial render.
+       */
+      renderTopics(allTopics);
+      applyFilters();
+
+      console.info(
+        `Archive loaded: ${allTopics.length} unique topic titles.`,
+        `Main topics: ${mainTopics.length}.`,
+        `Additional topics: ${extraTopics.length}.`
+      );
     });
   </script>
+
 </body>
 </html>
