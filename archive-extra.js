@@ -1,4 +1,5 @@
 const archiveExtraIdeas = [
+  { href: 'closure.html', title: 'Causal Closure and Bioelectric Cognition', category: 'biology', preview: 'How do living systems maintain themselves, coordinate their cells, and organize complex biological structures?' },
   { href: 'elnino.html',  title: 'El Niño and Coastal Upwelling', category: 'geography', preview: 'How did the 2015–2016 El Niño event affect sea-surface temperatures and marine productivity along the coast of Peru?' },
 { href: 'scopetopic.html', title: 'Urban Expansion and Agricultural Land Loss in Córdoba, Argentina', category: 'geography', 
   preview: 'How has urban expansion changed the landscape around Córdoba, Argentina, over the past decade?  ' },
