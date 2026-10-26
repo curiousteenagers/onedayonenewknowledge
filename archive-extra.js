@@ -1,6 +1,9 @@
 const archiveExtraIdeas = [
+  { href: 'holographic.html', title: 'The Holographic Principle', category: 'physics', preview: 'Could the information describing a three-dimensional region of space be encoded on a lower-dimensional boundary?' },
   { href: 'Iinterbrain.html', title: 'Interbrain Synchrony (Hyperscanning)', category: 'neuroscience', preview: 'What happens inside two brains when people communicate, cooperate, or work toward a shared goal?' },
-   { href: 'germt.html', title: 'Germ Theory of Disease', category: 'biology', preview: 'How did scientists discover that microscopic organisms can cause infectious diseases?' },
+ { href: 'quantumtimecrystals.html', title: 'Quantum Time Crystals', category: 'physics', preview: ' Explore quantum time crystals, unusual phases of matter in which interacting quantum systems display stable, repeating patterns of motion that challenge conventional ideas about symmetry and equilibrium.' },
+
+  { href: 'germt.html', title: 'Germ Theory of Disease', category: 'biology', preview: 'How did scientists discover that microscopic organisms can cause infectious diseases?' },
  { href: 'retroactiveinterference.html', title: 'Retroactive Interference & Memory Reconsolidation', category: 'neuroscience', preview: 'Why can learning something new make an older memory harder to recall, and why can remembering an experience sometimes change it? ' },
   { href: 'closure.html', title: 'Causal Closure and Bioelectric Cognition', category: 'biology', preview: 'How do living systems maintain themselves, coordinate their cells, and organize complex biological structures?' },
   { href: 'elnino.html',  title: 'El Niño and Coastal Upwelling', category: 'geography', preview: 'How did the 2015–2016 El Niño event affect sea-surface temperatures and marine productivity along the coast of Peru?' },
