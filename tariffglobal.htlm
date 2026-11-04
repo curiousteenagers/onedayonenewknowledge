@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Policy as Industrial Policy - One Day, One New Knowledge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">One Day, One New Knowledge</a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="daily-idea.html">Daily Idea</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Idea Content -->
+  <section class="page-section white">
+    <div class="container" style="max-width: 800px;">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="category-economics.html">Economics</a>
+        <span>/</span>
+        <span>Trade Policy as Industrial Policy </span>
+      </div>
+      
+      <div class="idea-header">
+        <p style="color: var(--primary-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--spacing-sm);">Economics</p>
+        <h1 class="idea-title"> Trade Policy as Industrial Policy </h1>
+        <p style="font-size: 1.05rem; color: var(--gray-text); line-height: 1.8;">Evaluate the employment and supply-chain re-routing effects of strategic tariffs.</p>
+      </div>
+      
+     
+        <div class="media-placeholder">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/k9tqkC_0usc?si=CqZx_TH2YLwPwmCa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+     
+<div class="content-section">
+    <h3>Key Concepts</h3>
+    <ul class="key-concepts">
+      <li><strong>Price Pass-Through Burden:</strong> Economic models and research from the Brookings Institution demonstrate an eighty to one hundred percent price pass-through, meaning tariff costs are borne almost entirely by domestic businesses and end consumers rather than foreign exporters.</li>
+      <li><strong>The Supply Chain Detour and Connector Economies:</strong> Rather than reviving domestic factories, multinational corporations bypass trade barriers through connector economies like Vietnam, Thailand, and Bangladesh via the China plus one strategy, where rerouting offset thirteen percent of direct trade declines between twenty eighteen and twenty twenty-two.</li>
+      <li><strong>The Intermediate Input Trap and Labor Reshuffling:</strong> Taxing intermediate inputs like steel, aluminum, and semiconductors increases production costs for domestic factories, stoking inflation and causing a chaotic job reshuffling across sectors rather than creating net manufacturing employment.</li>
+      <li><strong>The Trade War Prisoner's Dilemma:</strong> While unilateral tariffs might theoretically yield a quarter of a percent welfare gain without retaliation, real-world reciprocal trade retaliation creates a net welfare loss of three point eight percent where all participating nations lose.</li>
+      <li><strong>Lerner Symmetry and Temporal Adjustment Lag:</strong> Under Lerner symmetry, protecting domestic markets through import tariffs functions as an unintended tax on domestic exporters, while scaling up domestic production requires an adjustment timeline of eight or more years.</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h3>Vocabulary</h3>
+    <div class="vocabulary">
+      <div class="vocab-item">
+        <strong>Decouple (C2)</strong>
+        <span>To disconnect or separate two entities or systems, describing policy goals to separate national economies from geopolitical rivals.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Reroute (C1)</strong>
+        <span>To send or direct along a different or indirect route, characterizing corporate tariff evasion through intermediate third-country ports.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Intermediate (C1)</strong>
+        <span>Located between two stages, points, or processes, describing raw materials and component inputs like steel or semiconductors.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Retaliation (C2)</strong>
+        <span>Action taken to harm or punish someone in return for an injury or offense, describing reciprocal trade counter-measures.</span>
+      </div>
+      <div class="vocab-item">
+        <strong>Symmetry (C2)</strong>
+        <span>The quality of having matching or corresponding parts, referring to Lerner symmetry where import tariffs inadvertently suppress export demand.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3>Big Question</h3>
+    <div class="big-question">
+      "If strategic tariffs primarily pass costs onto domestic consumers, trigger supply chain rerouting through third-country middlemen, and penalize domestic exporters through trade retaliation, can blunt trade barriers effectively foster long-term industrial self-reliance in an interconnected global economy?"
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3>Questions to Explore</h3>
+    <ul class="key-concepts">
+      <li>How might customs agencies improve rules of origin enforcement to distinguish authentic supply chain diversification from clever tariff evasion through connector economies?</li>
+      <li>Could domestic industrial policies mitigate the intermediate input trap by exempting essential raw materials like steel and semiconductors from protective tariffs?</li>
+      <li>What if international trade organizations developed dynamic labor transition frameworks to support displaced workers during the eight-year adjustment lag required to scale up domestic manufacturing?</li>
+    </ul>
+  </div>
+      <div class="discussion-section">
+        <h3>Discussion & Comments</h3>
+        <form class="comment-form" data-idea-id="1">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email (optional)">
+          <textarea name="comment" placeholder="Share your thoughts..."></textarea>
+          <button type="submit" class="btn btn-primary">Post Comment</button>
+        </form>
+        <div class="comments-list"></div>
+      </div>
+      
+      <div class="idea-nav">
+        <a href="category-economics.html" class="idea-nav-item">
+          <small>← Back to Category</small>
+          <strong>Economics</strong>
+        </a>
+        <a href="tprospect.html" class="idea-nav-item" style="text-align: right;">
+          <small>Next Idea →</small>
+          <strong>Prospect Theory </strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="daily-idea.html">Daily Idea</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="about.html">About This Project</a></li>
+          <li><a href="donate.html">Support Us</a></li>
+          <li><a href="index.html#">Privacy</a></li>
+          <li><a href="index.html#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="daily-idea.html">Explore Today</a></li>
+          <li><a href="categories.html">By Discipline</a></li>
+          <li><a href="archive.html">Browse All</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 One Day, One New Knowledge. A passion project dedicated to curiosity and learning.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initializeComments);
+  </script>
+</body>
+</html>
