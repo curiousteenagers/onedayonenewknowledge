@@ -10,7 +10,7 @@ const archiveExtraIdeas = [
  { href: 'bordersecuritization.html',  title: 'Border Securitization', category: 'geography', preview: 'How do border walls, surveillance systems, and immigration policies reshape the movement of people, goods, and services across national boundaries?' },
 
   { href: 'holographic.html', title: 'The Holographic Principle', category: 'physics', preview: 'Could the information describing a three-dimensional region of space be encoded on a lower-dimensional boundary?' },
-  { href: 'Iinterbrain.html', title: 'Interbrain Synchrony (Hyperscanning)', category: 'neuroscience', preview: 'What happens inside two brains when people communicate, cooperate, or work toward a shared goal?' },
+  { href: 'Interbrain.html', title: 'Interbrain Synchrony (Hyperscanning)', category: 'neuroscience', preview: 'What happens inside two brains when people communicate, cooperate, or work toward a shared goal?' },
  { href: 'quantumtimecrystals.html', title: 'Quantum Time Crystals', category: 'physics', preview: ' Explore quantum time crystals, unusual phases of matter in which interacting quantum systems display stable, repeating patterns of motion that challenge conventional ideas about symmetry and equilibrium.' },
 
   { href: 'germt.html', title: 'Germ Theory of Disease', category: 'biology', preview: 'How did scientists discover that microscopic organisms can cause infectious diseases?' },
