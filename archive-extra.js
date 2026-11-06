@@ -1,4 +1,6 @@
 const archiveExtraIdeas = [
+  { href: 'chronicfatigue.html', title: 'Cognitive Difficulties in ME/CFS', category: 'neuroscience', preview: 'How does chronic fatigue syndrome affect memory, attention, processing speed, and other cognitive functions?' },
+
    { href: 'divinehighness.html', title: 'The Problem of Divine Hiddenness', category: 'philosophy', preview: "If God is perfectly loving, why do sincere people fail to believe in Him? Explore Schellenberg’s argument and its main objections." }, 
  { href: 'arcticsovereignty.html',  title: 'Arctic Shipping Routes and Territorial Claims in a Warming Arctic', category: 'geography', preview: 'How is declining sea ice reshaping access to the Arctic and intensifying competition over maritime routes and natural resources?' },
 { href: 'debtsov.html', title: 'Fiscal Sustainability & Sovereign Debt', category: 'economics', preview: 'How do creditor coordination challenges affect sovereign debt restructuring outcomes and fiscal sustainability in emerging markets?' },
