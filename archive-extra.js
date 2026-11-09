@@ -1,6 +1,6 @@
 const archiveExtraIdeas = [
  { href: 'insomniamd.html', title: 'Insomnia and Mental Health Disorders', category: 'psychology', preview: "How are insomnia, anxiety, and depression connected, and how can sleep disturbances influence emotional regulation and mental health?" },
- { href: 'determinism .html', title: 'Determinism ', category: 'philosophy', preview: "Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?"
+ { href: 'determinism .html', title: 'Determinism ', category: 'philosophy', preview: "Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?"},
   { href: 'decisionmakingchem.html', title: 'Brain Chemistry and Impulsive vs. Cautious Decision-Making', category: 'neuroscience', preview: ' How do neurotransmitters such as dopamine and serotonin influence risk-taking, impulse control, and the way people make decisions?' },
  { href: 'examseasonstudent.html', title: 'Student Mental Health During Exam Season', category: 'psychology', preview: "How does academic pressure during examination periods influence students' stress levels, anxiety, sleep, and psychological well-being?" },
 
