@@ -1,4 +1,9 @@
 const archiveExtraIdeas = [
+ { href: 'insomniamd.html', title: 'Insomnia and Mental Health Disorders', category: 'psychology', preview: "How are insomnia, anxiety, and depression connected, and how can sleep disturbances influence emotional regulation and mental health?" },
+ { href: 'determinism .html', title: 'Determinism ', category: 'philosophy', preview: "Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?"
+  { href: 'decisionmakingchem.html', title: 'Brain Chemistry and Impulsive vs. Cautious Decision-Making', category: 'neuroscience', preview: ' How do neurotransmitters such as dopamine and serotonin influence risk-taking, impulse control, and the way people make decisions?' },
+ { href: 'examseasonstudent.html', title: 'Student Mental Health During Exam Season', category: 'psychology', preview: "How does academic pressure during examination periods influence students' stress levels, anxiety, sleep, and psychological well-being?" },
+
   { href: 'chronicfatigue.html', title: 'Cognitive Difficulties in ME/CFS', category: 'neuroscience', preview: 'How does chronic fatigue syndrome affect memory, attention, processing speed, and other cognitive functions?' },
 
    { href: 'divinehighness.html', title: 'The Problem of Divine Hiddenness', category: 'philosophy', preview: "If God is perfectly loving, why do sincere people fail to believe in Him? Explore Schellenberg’s argument and its main objections." }, 
