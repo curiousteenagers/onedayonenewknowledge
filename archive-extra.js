@@ -1,19 +1,18 @@
 const archiveExtraIdeas = [
-
+   { href: 'insomniamd.html', title: 'Insomnia and Mental Health Disorders', category: 'psychology', preview: 'How are insomnia, anxiety, and depression connected, and how can sleep disturbances influence emotional regulation and mental health?' },
+ { href: 'determinism.html', title: 'Determinism ', category: 'philosophy', preview: 'Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?' },
+  { href: 'decisionmakingchem.html', title: 'Brain Chemistry and Impulsive vs. Cautious Decision-Making', category: 'neuroscience', preview: ' How do neurotransmitters such as dopamine and serotonin influence risk-taking, impulse control, and the way people make decisions?' },
+ { href: 'examseasonstudent.html', title: 'Student Mental Health During Exam Season', category: 'psychology', preview: "How does academic pressure during examination periods influence students' stress levels, anxiety, sleep, and psychological well-being?" },
   { href: 'chronicfatigue.html', title: 'Cognitive Difficulties in ME/CFS', category: 'neuroscience', preview: 'How does chronic fatigue syndrome affect memory, attention, processing speed, and other cognitive functions?' },
-
    { href: 'divinehighness.html', title: 'The Problem of Divine Hiddenness', category: 'philosophy', preview: "If God is perfectly loving, why do sincere people fail to believe in Him? Explore Schellenberg’s argument and its main objections." }, 
  { href: 'arcticsovereignty.html',  title: 'Arctic Shipping Routes and Territorial Claims in a Warming Arctic', category: 'geography', preview: 'How is declining sea ice reshaping access to the Arctic and intensifying competition over maritime routes and natural resources?' },
 { href: 'debtsov.html', title: 'Fiscal Sustainability & Sovereign Debt', category: 'economics', preview: 'How do creditor coordination challenges affect sovereign debt restructuring outcomes and fiscal sustainability in emerging markets?' },
  { href: 'tariffglobal.html', title: ' Trade Policy as Industrial Policy', category: 'economics', preview: 'Evaluate the employment and supply-chain re-routing effects of strategic tariffs.' },
- 
  { href: 'simulation2.html', title: 'The Simulation Argument', category: 'philosophy', preview: "Explore Nick Bostrom’s trilemma and the possibility that our reality is a computer simulation. Could we be living in one, and what does logic and science tell us? " }, 
  { href: 'bordersecuritization.html',  title: 'Border Securitization', category: 'geography', preview: 'How do border walls, surveillance systems, and immigration policies reshape the movement of people, goods, and services across national boundaries?' },
-
   { href: 'holographic.html', title: 'The Holographic Principle', category: 'physics', preview: 'Could the information describing a three-dimensional region of space be encoded on a lower-dimensional boundary?' },
   { href: 'Interbrain.html', title: 'Interbrain Synchrony (Hyperscanning)', category: 'neuroscience', preview: 'What happens inside two brains when people communicate, cooperate, or work toward a shared goal?' },
  { href: 'quantumtimecrystals.html', title: 'Quantum Time Crystals', category: 'physics', preview: ' Explore quantum time crystals, unusual phases of matter in which interacting quantum systems display stable, repeating patterns of motion that challenge conventional ideas about symmetry and equilibrium.' },
-
   { href: 'germt.html', title: 'Germ Theory of Disease', category: 'biology', preview: 'How did scientists discover that microscopic organisms can cause infectious diseases?' },
  { href: 'retroactiveinterference.html', title: 'Retroactive Interference & Memory Reconsolidation', category: 'neuroscience', preview: 'Why can learning something new make an older memory harder to recall, and why can remembering an experience sometimes change it? ' },
   { href: 'closure.html', title: 'Causal Closure and Bioelectric Cognition', category: 'biology', preview: 'How do living systems maintain themselves, coordinate their cells, and organize complex biological structures?' },
