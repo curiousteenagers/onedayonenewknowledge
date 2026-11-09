@@ -1,6 +1,6 @@
 const archiveExtraIdeas = [
  { href: 'insomniamd.html', title: 'Insomnia and Mental Health Disorders', category: 'psychology', preview: 'How are insomnia, anxiety, and depression connected, and how can sleep disturbances influence emotional regulation and mental health?' },
- { href: 'determinism .html', title: 'Determinism ', category: 'philosophy', preview: 'Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?' },
+ { href: 'determinism.html', title: 'Determinism ', category: 'philosophy', preview: 'Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?' },
   { href: 'decisionmakingchem.html', title: 'Brain Chemistry and Impulsive vs. Cautious Decision-Making', category: 'neuroscience', preview: ' How do neurotransmitters such as dopamine and serotonin influence risk-taking, impulse control, and the way people make decisions?' },
  { href: 'examseasonstudent.html', title: 'Student Mental Health During Exam Season', category: 'psychology', preview: "How does academic pressure during examination periods influence students' stress levels, anxiety, sleep, and psychological well-being?" },
 
@@ -9,7 +9,7 @@ const archiveExtraIdeas = [
    { href: 'divinehighness.html', title: 'The Problem of Divine Hiddenness', category: 'philosophy', preview: "If God is perfectly loving, why do sincere people fail to believe in Him? Explore Schellenberg’s argument and its main objections." }, 
  { href: 'arcticsovereignty.html',  title: 'Arctic Shipping Routes and Territorial Claims in a Warming Arctic', category: 'geography', preview: 'How is declining sea ice reshaping access to the Arctic and intensifying competition over maritime routes and natural resources?' },
 { href: 'debtsov.html', title: 'Fiscal Sustainability & Sovereign Debt', category: 'economics', preview: 'How do creditor coordination challenges affect sovereign debt restructuring outcomes and fiscal sustainability in emerging markets?' },
- { href: 'tariffglobal.htlm', title: ' Trade Policy as Industrial Policy', category: 'economics', preview: 'Evaluate the employment and supply-chain re-routing effects of strategic tariffs.' },
+ { href: 'tariffglobal.html', title: ' Trade Policy as Industrial Policy', category: 'economics', preview: 'Evaluate the employment and supply-chain re-routing effects of strategic tariffs.' },
  
  { href: 'simulation2.html', title: 'The Simulation Argument', category: 'philosophy', preview: "Explore Nick Bostrom’s trilemma and the possibility that our reality is a computer simulation. Could we be living in one, and what does logic and science tell us? " }, 
  { href: 'bordersecuritization.html',  title: 'Border Securitization', category: 'geography', preview: 'How do border walls, surveillance systems, and immigration policies reshape the movement of people, goods, and services across national boundaries?' },
