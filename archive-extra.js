@@ -1,6 +1,10 @@
 const archiveExtraIdeas = [
+    { href: 'logarithms2.html', title: 'Logarithms — Part 2: Logarithmic Equations ', category: 'math', preview: 'Learn how to solve logarithmic equations using logarithmic properties, algebraic transformations, and domain restrictions.' },
+ 
    { href: 'insomniamd.html', title: 'Insomnia and Mental Health Disorders', category: 'psychology', preview: 'How are insomnia, anxiety, and depression connected, and how can sleep disturbances influence emotional regulation and mental health?' },
- { href: 'determinism.html', title: 'Determinism ', category: 'philosophy', preview: 'Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?' },
+ { href: 'logarithms1.html', title: 'Logarithms — Part 1: Properties, Operations, and Combined Calculations', category: 'math', preview: 'Learn how to apply logarithmic properties, perform operations, and solve combined calculations step by step.' },
+ 
+   { href: 'determinism.html', title: 'Determinism ', category: 'philosophy', preview: 'Are our decisions truly free, or are they shaped by previous events, biological influences, and the laws of nature?' },
   { href: 'decisionmakingchem.html', title: 'Brain Chemistry and Impulsive vs. Cautious Decision-Making', category: 'neuroscience', preview: ' How do neurotransmitters such as dopamine and serotonin influence risk-taking, impulse control, and the way people make decisions?' },
  { href: 'examseasonstudent.html', title: 'Student Mental Health During Exam Season', category: 'psychology', preview: "How does academic pressure during examination periods influence students' stress levels, anxiety, sleep, and psychological well-being?" },
   { href: 'chronicfatigue.html', title: 'Cognitive Difficulties in ME/CFS', category: 'neuroscience', preview: 'How does chronic fatigue syndrome affect memory, attention, processing speed, and other cognitive functions?' },
