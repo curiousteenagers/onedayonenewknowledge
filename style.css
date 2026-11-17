@@ -36,6 +36,14 @@ body {
   color: var(--dark-text);
   line-height: 1.6;
   font-size: 16px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
 }
 
 /* ============================================
@@ -110,6 +118,7 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
+  width: 100%;
 }
 
 .page-section {
@@ -267,18 +276,19 @@ p {
 }
 
 .grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 }
 
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 }
 
 .grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
 }
 
 .card {
+  min-width: 0;
   background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
   border: 1px solid var(--gray-border);
   border-radius: 8px;
@@ -363,42 +373,85 @@ p {
 
 .search-box {
   margin-bottom: var(--spacing-lg);
-  max-width: 480px;
+  max-width: 620px;
+}
+
+.search-box label,
+.filter-heading {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.search-input-wrap {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-md);
+  color: var(--pastel-green);
+  font-size: 1.5rem;
+  line-height: 1;
+  transform: translateY(-55%);
+  pointer-events: none;
 }
 
 .search-box input {
   width: 100%;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: 1rem var(--spacing-md) 1rem 3.2rem;
   border: 1px solid var(--gray-border);
-  border-radius: 999px;
-  font-size: 0.95rem;
+  border-radius: 8px;
+  font-size: 1rem;
   color: var(--dark-text);
   background-color: var(--white);
+  box-shadow: 0 8px 24px rgba(45, 80, 22, 0.07);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .search-box input:focus {
   outline: none;
   border-color: var(--pastel-green);
-  box-shadow: 0 0 0 3px rgba(166, 217, 181, 0.2);
+  box-shadow: 0 0 0 4px rgba(109, 158, 126, 0.16);
+}
+
+.filter-heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.filter-hint {
+  color: var(--gray-text);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .filter-section {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 0.6rem;
   margin-bottom: var(--spacing-lg);
   flex-wrap: wrap;
 }
 
 .filter-btn {
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: 0.6rem 0.9rem;
   border: 1px solid var(--gray-border);
   background-color: var(--white);
-  border-radius: 20px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   font-weight: 500;
   font-size: 0.9rem;
-  color: var(--gray-text);
+  color: var(--dark-text);
 }
 
 .filter-btn:hover,
@@ -406,6 +459,22 @@ p {
   background-color: var(--pastel-green);
   color: var(--white);
   border-color: var(--pastel-green);
+}
+
+.filter-btn:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .filter-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .filter-btn {
+    flex: 1 1 calc(50% - 0.6rem);
+  }
 }
 
 .empty-state {
@@ -461,6 +530,16 @@ p {
 .media-placeholder {
   color: var(--gray-text);
   text-align: center;
+}
+
+.media-placeholder iframe,
+.media-container iframe {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
 }
 
 .content-section {
@@ -574,7 +653,7 @@ textarea::placeholder {
 
 .idea-nav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--spacing-lg);
   margin-top: var(--spacing-2xl);
   padding-top: var(--spacing-xl);
@@ -622,7 +701,7 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-lg);
 }
@@ -699,6 +778,23 @@ footer {
    RESPONSIVE DESIGN
    ============================================ */
 
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .nav-logo {
+    text-align: center;
+  }
+
+  .nav-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -743,13 +839,10 @@ footer {
     font-size: 1.5rem;
   }
 
-  .nav-container {
-    padding: var(--spacing-md);
-  }
-
   .nav-menu {
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs) var(--spacing-sm);
     font-size: 0.85rem;
+    padding: 0;
   }
 
   .page-section {
