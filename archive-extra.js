@@ -1,4 +1,4 @@
-const archiveExtraIdeas = [
+window.archiveExtraIdeas = [
     { href: 'logarithms2.html', title: 'Logarithms — Part 2: Logarithmic Equations ', category: 'math', preview: 'Learn how to solve logarithmic equations using logarithmic properties, algebraic transformations, and domain restrictions.' },
  
    { href: 'insomniamd.html', title: 'Insomnia and Mental Health Disorders', category: 'psychology', preview: 'How are insomnia, anxiety, and depression connected, and how can sleep disturbances influence emotional regulation and mental health?' },
