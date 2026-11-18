@@ -78,6 +78,8 @@ function filterIdeas(category, searchQuery = '') {
 
 // Replace the browser-only comment form with a shared Giscus discussion.
 function initializeComments() {
+  const currentPage = window.location.pathname.split('/').pop().replace(/\.html$/, '');
+
   document.querySelectorAll('.comment-form').forEach(commentForm => {
     const ideaId = commentForm.dataset.ideaId;
     const discussion = commentForm.closest('.discussion-section');
@@ -100,7 +102,7 @@ function initializeComments() {
     giscusScript.dataset.category = 'Announcements';
     giscusScript.dataset.categoryId = 'DIC_kwDOSMvXws4DHdhx';
     giscusScript.dataset.mapping = 'specific';
-    giscusScript.dataset.term = `idea-${ideaId}`;
+    giscusScript.dataset.term = currentPage === 'daily-idea' ? `idea-${ideaId}` : currentPage;
     giscusScript.dataset.strict = '1';
     giscusScript.dataset.reactionsEnabled = '1';
     giscusScript.dataset.inputPosition = 'bottom';
