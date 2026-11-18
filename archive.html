@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Archive - One Day, One New Knowledge</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation -->
@@ -116,13 +116,31 @@
       });
     }
 
+    async function loadFirstAvailableArchiveScript(paths) {
+      let lastError;
+
+      for (const src of paths) {
+        try {
+          await loadArchiveScript(src);
+          return;
+        } catch (error) {
+          lastError = error;
+        }
+      }
+
+      throw lastError;
+    }
+
     document.addEventListener('DOMContentLoaded', async () => {
-      const requiredScripts = ['js/data.js', 'js/script.js'];
+      const requiredScripts = [
+        ['data.js', 'js/data.js'],
+        ['script.js', 'js/script.js']
+      ];
       let extrasLoaded = true;
 
       try {
-        for (const src of requiredScripts) {
-          await loadArchiveScript(src);
+        for (const paths of requiredScripts) {
+          await loadFirstAvailableArchiveScript(paths);
         }
       } catch (error) {
         document.getElementById('no-results').textContent = 'No se pudieron cargar las ideas. Recarga la página.';
@@ -131,7 +149,7 @@
       }
 
       try {
-        await loadArchiveScript('js/archive-extra.js');
+        await loadFirstAvailableArchiveScript(['archive-extra.js', 'js/archive-extra.js']);
       } catch (error) {
         extrasLoaded = false;
       }
@@ -182,7 +200,7 @@
 
       if (!extrasLoaded) {
         const status = document.getElementById('archive-load-status');
-        status.textContent = 'Se cargaron las ideas principales. La lista completa no está disponible porque falta js/archive-extra.js en el repositorio publicado.';
+        status.textContent = 'Se cargaron las ideas principales, pero no se pudo cargar la lista completa de artículos.';
         status.style.display = 'block';
       }
     });
